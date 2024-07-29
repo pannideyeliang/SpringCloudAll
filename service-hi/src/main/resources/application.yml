@@ -1,0 +1,13 @@
+server:
+  port: 9900
+
+spring:
+  application:
+    name: service-hi
+
+eureka:
+  instance:
+    hostname: localhost  # 这里服务器上不要写localhost，最好写自己的IP，不然会调用方会找自己的localhost端口发过去
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.213.135:8761/eureka/,http://192.168.213.136:8761/eureka/
